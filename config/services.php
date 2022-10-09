@@ -31,4 +31,10 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'jwt' => [
+        'iss' => env('JWT_ISSUER'),
+        'aud' => env('JWT_AUDIENCE'),
+        'expire_minutes' => env('JWT_EXPIRE_MINUTES'),
+    ],
+
 ];
