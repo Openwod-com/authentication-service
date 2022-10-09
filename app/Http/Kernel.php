@@ -15,6 +15,7 @@ class Kernel extends HttpKernel
      * @var array<int, class-string|string>
      */
     protected $middleware = [
+        ReturnJson::class,
         // \App\Http\Middleware\TrustHosts::class,
         \App\Http\Middleware\TrustProxies::class,
         \Illuminate\Http\Middleware\HandleCors::class,
@@ -32,7 +33,6 @@ class Kernel extends HttpKernel
     protected $middlewareGroups = [
         'web' => [
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            ReturnJson::class
         ],
 
         'api' => [
