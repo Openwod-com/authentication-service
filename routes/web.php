@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BasicLoginController;
+use App\Http\Controllers\PublicKeyController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,5 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/public_key', [PublicKeyController::class, 'index']);
 
 Route::post('/login', [BasicLoginController::class, 'index']);
