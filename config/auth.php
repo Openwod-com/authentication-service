@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'svc' => [
+            'driver' => 'sanctum',
+            'provider' => 'svc',
+            'hash' => true,
+        ],
     ],
 
     /*
@@ -63,6 +68,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+
+        'svc' => [
+            'driver' => 'eloquent',
+            'model' => Openwod\ServiceAccounts\Models\ServiceAccount::class,
         ],
 
         // 'users' => [
