@@ -11,15 +11,7 @@ class AccountController extends Controller
 
     public function store(Request $request)
     {
-        // Body:
-        //     user_id: number
-        //         UserID from user-service.
-        //     email: string, email format
-        //     password: string
-        //     admin: boolean
-        // Endpointen används för att skapa kontot i autentiserings tjänsten. Det är User-service som hanterar användarens begäran.
-        // Service konto rättighet: account.create
-        // Returns error if invalid.
+        /** @var \Openwod\ServiceAccounts\Models\ServiceAccount */
         $svc = auth()->guard('svc')->user();
         if($svc == null || !$svc->tokenCan('account.create'))
             return ["status" => "error", "error" => "authentication denied"];
@@ -39,6 +31,6 @@ class AccountController extends Controller
         ]);
         $user->save();
 
-        return ['status' => 'success'];
+        return response(['status' => 'success'], 201);
     }
 }

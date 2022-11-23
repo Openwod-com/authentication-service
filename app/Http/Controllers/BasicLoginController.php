@@ -29,7 +29,7 @@ class BasicLoginController extends Controller
             $jwt = JWT::encode($payload, $priv_key, 'RS256');
             return ["status" => "success", "jwt" => $jwt];
         } else {
-            return ["status" => "failed", "error" => "Invalid credentials"];
+            return response(["status" => "failed", "error" => "Invalid credentials"], 400);
         }
     }
 

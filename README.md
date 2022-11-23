@@ -14,16 +14,7 @@ För att autentisera med service konto ska dess token skickas som en Authenticat
 För att skapa service konton, se [Opwnwod service-accounts](https://github.com/Openwod-com/service-accounts)
 
 # Routes
-```
-POST /service_accounts
-    Body:
-        name
-        permissions
-            Comma separated list of permissions in format something.something
-    Creates a new Service account
-    Permission: service-accounts.create
-    Returns service account token
-
+``
 GET /public_key
     Returnerar den publika nyckel som tillhör den privata nyckeln som används för att signera JWTs.
 
@@ -40,3 +31,6 @@ POST /accounts
     Endpointen används för att skapa kontot i autentiserings tjänsten. Det är User-service som hanterar användarens begäran.
     Service konto rättighet: account.create
 ```
+
+## TODO:
+Check for sql exception in create account
