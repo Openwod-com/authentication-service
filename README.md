@@ -14,7 +14,7 @@ För att autentisera med service konto ska dess token skickas som en Authenticat
 För att skapa service konton, se [Opwnwod service-accounts](https://github.com/Openwod-com/service-accounts)
 
 # Routes
-``
+```
 GET /public_key
     Returnerar den publika nyckel som tillhör den privata nyckeln som används för att signera JWTs.
 
