@@ -4,6 +4,10 @@ En mikrotjänst för att hantera autentisering av användare.
 ## Gymnasiearbetet
 Projektet är kopplat till gymnasiearbetet Rasmus Wiktell Sundman gör.
 
+# Generera nycklar
+För att generera publik och privat nyckel kör:
+bash generate-keys.sh
+
 ## Autentisering
 Olika enpoints kärver olika autentisering.
 Det finns tre olika autentiseringskrav. Endpoints kan antingen vara öppna för alla, endast via användarens JWT eller servicekonto. När användarens JWT och servicekonto används måste den även ha rätt behörigheter.
