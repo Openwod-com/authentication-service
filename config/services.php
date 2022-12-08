@@ -37,4 +37,9 @@ return [
         'expire_minutes' => env('JWT_EXPIRE_MINUTES'),
     ],
 
+    'users' => [
+        'base_url' => env('USERS_SERVICE_BASE_URL'),
+        'token' => env('USERS_SERVICE_TOKEN'),
+    ],
+
 ];
